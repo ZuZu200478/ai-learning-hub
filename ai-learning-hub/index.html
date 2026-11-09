@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="AI Learning Hub：把 RAG、電腦視覺和機器學習知識整理成可持續擴充的學習筆記。">
+  <meta name="theme-color" content="#0b1221">
+  <title>AI Learning Hub｜讓知識持續生長</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">跳至主要內容</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="AI Learning Hub 首頁"><span class="brand-mark">✦</span><span>AI<span class="brand-light"> / Learning Hub</span></span></a>
+      <nav class="nav-links" aria-label="主選單">
+        <a class="active" href="index.html">首頁</a>
+        <a href="#notes">探索筆記</a>
+        <a href="guide.html">新增指南</a>
+      </nav>
+      <a class="nav-cta" href="#notes">開始學習 <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> EXPLORE · LEARN · BUILD</span>
+          <h1>把學過的 AI，<br><span class="gradient-text">變成真正懂的知識。</span></h1>
+          <p class="hero-desc">一個持續更新的人工智慧學習筆記庫。從生成式 AI、電腦視覺到機器學習，把複雜概念整理成清楚、有條理、能反覆查閱的知識卡片。</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="#notes">探索學習筆記 <span aria-hidden="true">→</span></a><a class="btn btn-ghost" href="guide.html">了解如何擴充 ↗</a></div>
+          <div class="hero-proof"><span class="tiny-star">✳</span> 無需框架・靜態部署・持續擴充</div>
+        </div>
+        <div class="hero-visual" aria-label="AI 知識之間的關聯示意圖" role="img">
+          <div class="visual-frame">
+            <div class="visual-top"><span class="window-dots"><i></i><i></i><i></i></span><span>knowledge-map / overview</span><span class="visual-chip">LIVE</span></div>
+            <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit orbit-c"></div>
+            <div class="connect-line line-a"></div><div class="connect-line line-b"></div><div class="connect-line line-c"></div>
+            <div class="map-center"><span class="map-spark">✳</span><strong>AI<br>LEARNING</strong></div>
+            <div class="map-node node-llm"><span class="node-dot violet"></span> Generative AI</div>
+            <div class="map-node node-cv"><span class="node-dot cyan"></span> Computer Vision</div>
+            <div class="map-node node-ml"><span class="node-dot amber"></span> Machine Learning</div>
+            <div class="map-meta"><span>● KNOWLEDGE CONNECTED</span><span>v 1.0</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="container metrics-row"><div><strong id="count-total">06</strong><span>學習筆記</span></div><div><strong id="count-category">03</strong><span>核心領域</span></div><div><strong>∞</strong><span>持續擴充的可能</span></div><div class="metrics-caption">ONE SYSTEM.<br>ENDLESS LEARNING.</div></div>
+    </section>
+    <section class="notes-section" id="notes">
+      <div class="container">
+        <div class="section-heading"><div><span class="section-kicker">01 / THE LIBRARY</span><h2>探索知識<span class="soft-title">，從這裡開始。</span></h2><p>把每一次學習，都變成下一次探索的起點。</p></div><div class="section-side">CURATED NOTES<br>UPDATED REGULARLY ↘</div></div>
+        <div class="filter-bar"><label class="search-box"><span aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="搜尋主題、關鍵字或標籤…" aria-label="搜尋筆記"><kbd>/</kbd></label><div class="filter-buttons" id="filter-buttons" role="group" aria-label="依領域篩選"><button class="filter active" data-category="全部" type="button" aria-pressed="true">全部</button><button class="filter" data-category="生成式 AI" type="button" aria-pressed="false">生成式 AI</button><button class="filter" data-category="電腦視覺" type="button" aria-pressed="false">電腦視覺</button><button class="filter" data-category="機器學習" type="button" aria-pressed="false">機器學習</button></div></div>
+        <div class="results-header"><span id="results-label" aria-live="polite">正在載入筆記…</span><span class="results-hint">SELECT A TOPIC TO EXPLORE <span aria-hidden="true">↗</span></span></div>
+        <div class="notes-grid" id="notes-grid" aria-live="polite"><div class="loading">正在讀取學習筆記…</div></div>
+        <div class="empty-state hidden" id="empty-state"><strong>暫時沒有符合的筆記</strong><p>試試其他關鍵字，或切換分類。</p><button id="reset-filter" class="btn btn-outline" type="button">清除篩選</button></div>
+      </div>
+    </section>
+    <section class="method-section" id="workflow"><div class="container"><div class="section-heading"><div><span class="section-kicker">02 / HOW IT GROWS</span><h2>不是只做一個網頁，<br><span class="soft-title">而是建立一套方法。</span></h2></div><p class="method-intro">透過 AGENTS.md 規範內容格式與開發方式，讓 AI 能接著同一套設計，持續增加新知識。</p></div><div class="steps-grid"><article class="step-card"><span class="step-no">01</span><span class="step-icon">✍</span><h3>建立規範</h3><p>先定義檔案結構、視覺風格、欄位命名和內容品質標準。</p><span class="step-foot">AGENTS.md</span></article><article class="step-card"><span class="step-no">02</span><span class="step-icon">▦</span><h3>新增筆記</h3><p>AI 只需依照相同格式增加資料，無須複製整份網頁。</p><span class="step-foot">data/notes.json</span></article><article class="step-card"><span class="step-no">03</span><span class="step-icon">↗</span><h3>自動呈現</h3><p>共用卡片和文章版型，即可顯示新內容並支援搜尋與分類。</p><span class="step-foot">index.html + article.html</span></article></div><div class="method-banner"><div><span class="section-kicker">READY TO EXTEND?</span><h3>下一篇筆記，可以由 AI 接著完成。</h3></div><a class="btn btn-primary" href="guide.html">查看新增規則 <span aria-hidden="true">→</span></a></div></div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><a class="brand footer-brand" href="index.html"><span class="brand-mark">✦</span><span>AI<span class="brand-light"> / Learning Hub</span></span></a><p>Learn thoughtfully. Build continuously.</p><span>© 2026 AI Learning Hub · A reusable knowledge project</span></div></footer>
+</body>
+</html>

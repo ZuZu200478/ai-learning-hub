@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="AI Learning Hub 的專案規則與新增筆記流程。"><meta name="theme-color" content="#0b1221"><title>新增指南｜AI Learning Hub</title><link rel="stylesheet" href="assets/css/style.css"></head>
+<body data-page="guide"><a class="skip-link" href="#main">跳至主要內容</a><header class="site-header"><div class="container header-inner"><a class="brand" href="index.html"><span class="brand-mark">✦</span><span>AI<span class="brand-light"> / Learning Hub</span></span></a><nav class="nav-links" aria-label="主選單"><a href="index.html">首頁</a><a href="index.html#notes">探索筆記</a><a class="active" href="guide.html">新增指南</a></nav><a class="nav-cta" href="index.html#notes">開始學習 ↗</a></div></header>
+<main id="main" class="guide-main"><div class="container"><nav class="breadcrumb" aria-label="階層導覽"><a href="index.html">首頁</a><span>/</span><span>新增指南</span></nav><div class="guide-hero"><span class="eyebrow"><span class="eyebrow-dot"></span> DOCUMENTATION / HOW TO EXTEND</span><h1>讓下一篇筆記，<br><span class="gradient-text">也遵守同一套規則。</span></h1><p>這不是只適用一次的網頁模板，而是一套可交給 AI 閱讀、理解、重複執行的內容生產流程。</p></div><div class="guide-layout"><aside class="guide-sidebar"><span>PROJECT PRINCIPLE</span><p>規則先行，內容一致，設計可延伸。</p><a class="btn btn-primary" href="index.html#notes">查看成果 →</a></aside><div class="guide-content"><section><span class="section-kicker">STEP 01</span><h2>閱讀 AGENTS.md</h2><p>在新增或修改任何檔案前，AI 必須先讀取根目錄的 <code>AGENTS.md</code>，確認資料結構、命名規則、排版和品質要求。</p></section><section><span class="section-kicker">STEP 02</span><h2>新增一筆結構化資料</h2><p>只需在 <code>data/notes.json</code> 中新增一筆物件。每筆筆記包含 <code>slug</code>、<code>title</code>、<code>category</code>、<code>summary</code>、<code>tags</code> 與 <code>sections</code> 等一致欄位。</p><div class="code-window"><div class="code-title"><span>EXAMPLE / notes.json</span><span>JSON</span></div><pre><code>{
+  "slug": "new-ai-topic",
+  "title": "新的 AI 主題",
+  "category": "生成式 AI",
+  "summary": "用一句話說明重點。",
+  "tags": ["概念", "入門"],
+  "level": "入門",
+  "readMinutes": 4,
+  "updated": "2026-11-09",
+  "sections": [
+    {
+      "heading": "核心概念",
+      "paragraphs": ["清楚說明概念與用途。"]
+    }
+  ]
+}</code></pre></div></section><section><span class="section-kicker">STEP 03</span><h2>沿用現有頁面，不重造輪子</h2><p>首頁程式會自動從 JSON 產生卡片、分類與搜尋結果。文章詳細頁使用相同版型顯示新筆記，不需要為每篇文章重新複製 HTML。</p></section><section><span class="section-kicker">STEP 04</span><h2>檢查內容並發布</h2><p>執行 <code>python scripts/validate_notes.py</code> 確認 JSON 格式、分類、日期與 slug 沒有錯誤；再檢查手機版和文章連結，最後推送到 GitHub。</p></section><div class="guide-tip"><strong>可以怎麼向 AI 下指令？</strong><p>「請先閱讀 AGENTS.md，再幫我新增一篇『Self-RAG 入門』筆記。遵守現有欄位和分類，內容包含核心概念、基本流程、適用情境及練習題；完成後執行資料驗證，且不要修改既有頁面樣式。」</p></div></div></div></div></main>
+<footer class="site-footer"><div class="container footer-inner"><a class="brand footer-brand" href="index.html"><span class="brand-mark">✦</span><span>AI<span class="brand-light"> / Learning Hub</span></span></a><p>Learn thoughtfully. Build continuously.</p><span>© 2026 AI Learning Hub</span></div></footer></body></html>
